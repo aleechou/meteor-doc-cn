@@ -84,7 +84,7 @@ client、server 和 tests 以外的文件，在客户端和服务器端两边都
 
 在开发模式下，JavaScript 和 CSS 文件会为了调试方便而单独发送。
 
-HTML文件在 Meteor 应用程序中被处理的方式和普通服务器端框架稍有不同。Meteor 扫描你目录内所有HTML文件中的3个顶层元素：<head>,<body>,和<template>。head 和 body 区会分别包含到初始载入页面的head 和 body 中，并发送给客户端。
+HTML文件在 Meteor 应用程序中被处理的方式和普通服务器端框架稍有不同。Meteor 扫描你目录内所有HTML文件中的3个顶层元素：“<head>”,“<body>”,和“<template>”。head 和 body 区会分别包含到初始载入页面的head 和 body 中，并发送给客户端。
 
 模板区则会被转换成 Template命名空间下的 JavaScript 函数。这是一个将 HTML 传递给客户端的非常方便的方式。参考后面的模板章节。
 
