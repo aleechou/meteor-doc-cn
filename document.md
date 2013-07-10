@@ -97,7 +97,7 @@ It is best to write your application in such a way that it is insensitive to the
 * 子目录里的文件在父目录之前加载，所以先加载最深层的文件，根目录下的文件最后加载。
 * 在一个目录中，文件按照文件名的字母顺序加载。
 
-这些规则叠加作用，就是说，举个栗子，在 lib 目录内，文件首先都是按照文件名的字母顺序来加载的，然后有一些 main.js 文件，在这些文件当中，子目录下的会加载得早一些。
+这些规则叠加作用，就是说，举个例子，在 lib 目录内，文件首先都是按照文件名的字母顺序来加载的，然后有一些 main.js 文件，在这些文件当中，子目录下的会加载得早一些。
 
 ## 数据和安全
 
@@ -163,7 +163,7 @@ Meteor包含了Meteor账户，一个文艺范儿的认证系统。主要体现�
 
 Meteor还为一些通常的任务预建了表单，例如登陆，注册，修改密码，用邮箱来修改密码。你能用一行代码就添加一个账户界面到你的应用中。账户界面甚至还明智地打包了一个配置向导，来引导你在你的应用里安装外部登陆服务。
 
-> Meteor 当前版本支持 MongoDB，流行的文档数据库，这儿有使用[]MongoDB API](http://www.mongodb.org/display/DOCS/Manual)的例子。未来会支持其他数据库。
+> Meteor 当前版本支持 MongoDB，流行的文档数据库，这儿有使用[MongoDB API](http://www.mongodb.org/display/DOCS/Manual)的例子。未来会支持其他数据库。
 
 ## Reactivity
 
@@ -175,7 +175,7 @@ Meteor 拥抱[无功编程](http://en.wikipedia.org/wiki/Reactive_programming)(r
 
 这个例子（来自聊天室客户端）装置了一个基于会话(session)变量 currentRoomId 的数据订阅。Session.get("currentRoomId") 因为任何原因发生变化，函数就会自动重新运行，装置一个新的订阅来替换之前的。
 
-自动重计算靠 会话(Sessiong)和 Meteor.autosubscribe 的合作来实现。Meteor.autosubscribe这类方法在其跟踪的数据依赖项内安置一个“reactive 上下文(context)”，然后准备重新执行所需的必备参数。另一方面，数据提供者例如Session，在这个上下文中记录下他们被谁调用和哪些数据被请求，然后准备好当数据改变时发送一个失效信号。
+自动重计算靠 会话(Session)和 Meteor.autosubscribe 的合作来实现。Meteor.autosubscribe这类方法在其跟踪的数据依赖项内安置一个“reactive 上下文(context)”，然后准备重新执行所需的必备参数。另一方面，数据提供者例如Session，在这个上下文中记录下他们被谁调用和哪些数据被请求，然后准备好当数据改变时发送一个失效信号。
 
 这个简单的模式（reactive上下文 + reactive数据源）用途广泛。程序员不必写取消订阅/重新订阅的调用代码，也能保证在正确的时候被调用。一般来讲，Meteor能避免你去写各种数据传播代码，它们是会对应用程序造成影响的容易出错的逻辑。
 
